@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: steelblue;
+  margin-top: 20px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.todos li {
+  color: darkslategrey;
+}
+
+.checkLine {
+  text-decoration: line-through;
+}
