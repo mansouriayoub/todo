@@ -32,11 +32,8 @@ unorderedList.addEventListener('click', (e)=> {
 const lists = document.querySelectorAll('ul');
 lists.forEach(list => {
     list.addEventListener('click', (e) => {
-        if (!e.target.classList.contains('checkLine')) {
-            e.target.classList.add('checkLine')
-        } else if (e.target.classList.contains('checkLine')) {
-            e.target.classList.remove('checkLine')
-            e.target.removeAttribute('class')
+        if (e.target.tagName === 'SPAN') {
+            e.target.classList.toggle('checked')
         }
     })
 });
