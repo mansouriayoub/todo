@@ -14,8 +14,11 @@ body {
   color: darkslategrey;
 }
 
+span {
+  cursor: pointer;
+}
+
 .checked {
-  /* background-color: darkslategrey; */
   color: darkslategrey;
   text-decoration: line-through;
 }
