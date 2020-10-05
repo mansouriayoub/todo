@@ -20,11 +20,18 @@ addForm.addEventListener('submit', (e)=> {
     const todo = addForm.add.value.trim();
     generateTemplate(todo);
     addForm.reset();
+
+    localStorage.setItem('todo', todo);
 })
+
+if (localStorage.getItem('todo')) {
+    generateTemplate(localStorage.getItem('todo'))
+}
 
 unorderedList.addEventListener('click', (e)=> {
     if (e.target.classList.contains('delete')) {
         e.target.parentElement.remove();
+        localStorage.removeItem('todo', e.target)
     }
 
 })
